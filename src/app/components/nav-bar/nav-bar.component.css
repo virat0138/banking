@@ -1,0 +1,47 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+p {
+  display: block;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #333;
+}
+
+li p {
+  display: block;
+  color: brown;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-decoration: none;
+  background-color: #333;
+  text-decoration: inherit;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+li .signOut {
+  background-color: bisque;
+}

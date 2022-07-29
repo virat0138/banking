@@ -1,0 +1,89 @@
+.accountStmtWrapper {
+  display: grid;
+  grid-template-columns: 15% 20% 30% 20% 15%;
+  grid-template-areas:
+    " . . header . . "
+    "side content content content content";
+}
+
+.main-head {
+  grid-area: header;
+  background-color: #8a817c;
+  height: 70px;
+  text-align: center;
+  font-size: 3em;
+  line-height: 70px;
+  border: 2px solid black;
+}
+
+.content {
+  grid-area: content;
+  margin: 5px;
+  height: 30rem;
+}
+
+.content .date {
+  margin: 5px;
+  margin-top: 15px;
+  margin-right: 15px;
+  height: 3rem;
+  display: block;
+  float: right;
+  padding: 5px;
+}
+
+.content .date label {
+  font-size: 25px;
+  margin: 10px;
+}
+
+.content .date input {
+  font-size: 20px;
+}
+
+.content .accountGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  border: 2px solid black;
+  margin-top: 15%;
+}
+
+.content .accountGrid > div {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.content .submitbutton button {
+  height: 40px;
+  width: 100px;
+  border: 1px solid black;
+  margin-top: 4%;
+  margin-left: 40%;
+}
+
+.side {
+  grid-area: side;
+  background-color: #a5a5a5;
+  border: 1px solid black;
+}
+
+.side ul li a {
+  display: block;
+  text-decoration: none;
+  background-color: #a5a5a5;
+  padding: 10px 15px;
+  align-items: center;
+  text-transform: uppercase;
+  color: black;
+}
+
+.side ul li a:hover {
+  color: cornflowerblue;
+}
+
+.side ul {
+  background-color: #8a817c;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

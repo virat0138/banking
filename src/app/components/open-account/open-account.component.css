@@ -1,0 +1,82 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  border: 3px solid black;
+  background-color: #8a817c;
+  padding: 2px 15px;
+  width: 35%;
+  text-align: center;
+}
+
+.header h2 {
+  background-color: #8a817c;
+}
+
+.body {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.body > h3 {
+  border: 2px solid black;
+  background-color: #8a817c;
+  padding: 10px 15px;
+  width: 100;
+  color: white;
+}
+
+.formPanel {
+  margin-left: 15%;
+  width: 70%;
+}
+
+form {
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+form > div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form div label {
+  text-align: left;
+  height: 30px;
+  width: 50%;
+  flex: 0.5;
+}
+form div input {
+  text-align: left;
+  width: 40%;
+  border: 1px solid black;
+  flex: 0.5;
+}
+
+form div select {
+  text-align: left;
+  width: 40%;
+  border: 1px solid black;
+  flex: 0.5;
+}
+
+form button {
+  background-color: #e0afa0;
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+}
+
+form .required-field::after {
+  content: "*";
+  color: red;
+}
