@@ -26,9 +26,13 @@ export class AccountStatementComponent implements OnInit {
   accountStatement:any;
   // accountId=UserloginComponent.globalAccountNumber;
 
+
+
   constructor(private bankingService:BankingService,public global:GlobalConstants) {
+    this.filterTransaction.accountId=this.global.getGlobalVar();
     this.bankingService.getAccountByAccountId(this.global.getGlobalVar()).subscribe(data=>this.accountStatement=data);
    }
+
 
   ngOnInit(): void {
 

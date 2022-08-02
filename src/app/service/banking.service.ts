@@ -11,6 +11,7 @@ import { Transaction } from '../model/transaction.model';
 import { Beneficiary } from '../model/beneficiary.model';
 import { Registration } from '../model/registration.model';
 import { User } from '../model/user.model';
+import { BeneficiaryRegister } from '../model/beneficiaryRegister.model';
 
 
 @Injectable({
@@ -26,6 +27,8 @@ export class BankingService {
   openAccountUrl:string="http://localhost:8085/customer";
   registerUrl:string="http://localhost:8085/registerUser";
   userUrl:string="http://localhost:8085/login";
+  createAccountUrl:string="http://localhost:8085/account";
+  beneficiaryRegisterUrl:string="http://localhost:8085/beneficiary";
 
   getTransactions():Observable<ApiResponse>{
     return this.http.get<ApiResponse>(this.transactionUrl);
@@ -68,8 +71,13 @@ export class BankingService {
 
   }
 
+  createAccountByCustomerId(account:Account):Observable<string>{
+    return this.http.post<string>(this.createAccountUrl,account);
+  }
 
-
-
+  beneficiaryAccount(openBeneficiary: BeneficiaryRegister): Observable<Object>{
+    console.log(openBeneficiary);
+    return this.http.post(`${this.beneficiaryRegisterUrl}`,openBeneficiary);
+  }
 
 }

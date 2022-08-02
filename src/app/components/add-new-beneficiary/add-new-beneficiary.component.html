@@ -3,16 +3,26 @@
   <div class="header">Add New Beneficiary</div>
   <div class="body">
     <div class="form">
-      <form action="">
+      <form (ngSubmit)="BeneficiaryRegister()" action="">
         <div>
           <label for="bname">Beneficiary Name</label>
           <p>-</p>
-          <input type="text" />
+          <input
+            type="text"
+            id="beneficiaryName"
+            name="beneficiaryName"
+            [(ngModel)]="bRegister.beneficiaryName"
+          />
         </div>
         <div>
           <label for="bname">Beneficiary Account Number</label>
           <p>-</p>
-          <input type="text" />
+          <input
+            type="text"
+            id="beneficiaryAccountNo"
+            name="beneficiaryAccountNo"
+            [(ngModel)]="bRegister.beneficiaryAccountNo"
+          />
         </div>
         <div>
           <label for="bname">Re-Enter Account Number</label>
@@ -24,7 +34,12 @@
         <div>
           <label for="bname">Nick Name</label>
           <p>-</p>
-          <input type="text" />
+          <input
+            type="text"
+            id="nickname"
+            name="nickname"
+            [(ngModel)]="bRegister.nickname"
+          />
         </div>
         <div>
           <button>Save As Beneficiary</button>

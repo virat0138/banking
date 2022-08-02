@@ -1,12 +1,37 @@
+<script>
+  var todayDate = new Date();
+  var month = todayDate.getMonth();
+  var year = todayDate.getUTCFullYear();
+  var tdate = todayDate.getDate();
+  if (month < 9) {
+    month = "0" + month;
+  }
+  if (date < 10) {
+    tdate = "0" + tdate;
+  }
+  var maxDate = year + "-" + month + "-" + tdate;
+  console.log(maxDate);
+
+  document.getElementById("startDate").setAttribute("max", maxDate);
+</script>
 <app-nav-bar></app-nav-bar>
 <div class="accountStmtWrapper">
   <header class="main-head">Account Statement</header>
   <article [hidden]="beforeSubmit" class="content">
     <div class="date">
       <label for="from">Statement from</label>
-      <input [(ngModel)]="filterTransaction.startDate" type="date" />
+      <input
+        [(ngModel)]="filterTransaction.startDate"
+        type="date"
+        id="startDate"
+        max="2022-08-03"
+      />
       <label for="to">to</label>
-      <input [(ngModel)]="filterTransaction.endDate" type="date" />
+      <input
+        [(ngModel)]="filterTransaction.endDate"
+        type="date"
+        max="2022-08-03"
+      />
     </div>
     <div class="accountGrid">
       <div class="grid-item">Select</div>
