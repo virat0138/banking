@@ -1,0 +1,57 @@
+<app-nav-bar></app-nav-bar>
+<div class="accountStmtWrapper">
+  <header class="main-head">Account Summary</header>
+  <article class="content">
+    <header>Savings Account Summary</header>
+    <table>
+      <tr>
+        <th style="background-color: #e0afa0">Account Number</th>
+        <th style="background-color: #e0afa0">Account Type</th>
+        <th style="background-color: #e0afa0">Currency</th>
+        <th style="background-color: #e0afa0">Available Balance</th>
+        <th style="background-color: #e0afa0">Status</th>
+      </tr>
+      <tr>
+        <td style="background-color: transparent">
+          {{ accountSummary.accountId }}
+        </td>
+        <td style="background-color: transparent">Savings Account</td>
+        <td style="background-color: transparent">INR</td>
+        <td style="background-color: transparent">
+          ₹ {{ accountSummary.balanceAmount }}
+        </td>
+        <td
+          style="background-color: transparent"
+          *ngIf="accountSummary.isApproved == 1; else elseBlock"
+        >
+          Active
+        </td>
+        <ng-template #elseBlock>Inactive</ng-template>
+      </tr>
+    </table>
+    <header style="margin-top: 10%">Fixed Deposit Summary</header>
+    <table>
+      <tr>
+        <th style="background-color: #e0afa0">FD Number</th>
+        <th style="background-color: #e0afa0">Account Type</th>
+        <th style="background-color: #e0afa0">Currency</th>
+        <th style="background-color: #e0afa0">Capital Amount</th>
+      </tr>
+      <tr>
+        <td style="background-color: transparent"></td>
+        <td style="background-color: transparent"></td>
+        <td style="background-color: transparent"></td>
+        <td style="background-color: transparent"></td>
+      </tr>
+    </table>
+  </article>
+  <aside class="side">
+    <ul>
+      <li><a routerLink="/dashboard">Home</a></li>
+      <li><a routerLink="/accountDetails">Account Details</a></li>
+      <li><a routerLink="/accountSummary">Account Summary</a></li>
+      <li><a routerLink="/impsTransfer">Fund Transfer</a></li>
+      <li><a routerLink="/accountStatement">Account Statement</a></li>
+    </ul>
+  </aside>
+</div>

@@ -1,0 +1,67 @@
+<app-nav-bar></app-nav-bar>
+<div class="dashboardWrapper">
+  <header class="main-head">Account Details</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a routerLink="/accountStatement">Account Statement</a></li>
+      <li>
+        <div class="dropdown">
+          <span>Fund Transfer</span>
+          <div class="dropdown-content">
+            <a rel="rtgs" routerLink="/rtgsTransfer">RTGS Transfer</a>
+            <a rel="neft" routerLink="/neftTransfer">NEFT Transfer</a>
+            <a rel="imps" routerLink="/impsTransfer">IMPS Transfer</a>
+          </div>
+        </div>
+      </li>
+      <li><a routerLink="/userProfile">User Profile</a></li>
+      <li><a routerLink="">Change UserID Password</a></li>
+    </ul>
+  </nav>
+  <article [hidden]="false" class="content">
+    <header>Account Details</header>
+    <div>
+      <span><b>Account Number</b> </span>
+      <span>{{ accountDetails.accountId }}</span>
+    </div>
+    <div>
+      <span><b>Account Type</b> </span>
+      <span>Savings Bank Account</span>
+    </div>
+    <div>
+      <span><b>Account Balance</b> </span>
+      <span>{{ accountDetails.balanceAmount }}</span>
+    </div>
+    <div>
+      <span><b>Mobile Number</b> </span>
+      <span>{{ accountDetails.customer.mobileNumber }}</span>
+    </div>
+    <div>
+      <span><b>Pancard Number</b> </span>
+      <span>{{ accountDetails.customer.pancardNumber }}</span>
+    </div>
+    <div>
+      <span><b>Debit Card Active</b> </span>
+      <span *ngIf="accountDetails.customer.debitCard == 1; else elseBlock"
+        >True</span
+      >
+      <span><ng-template #elseBlock>False</ng-template></span>
+    </div>
+    <div>
+      <span><b>Netbanking Active</b> </span>
+      <span *ngIf="accountDetails.customer.netBanking == 1; else elseBlock"
+        >True</span
+      >
+      <span><ng-template #elseBlock>False</ng-template></span>
+    </div>
+  </article>
+  <aside class="side">
+    <ul>
+      <li><a routerLink="/dashboard">Home</a></li>
+      <li><a routerLink="/accountDetails">Account Details</a></li>
+      <li><a routerLink="/accountSummary">Account Summary</a></li>
+      <li><a routerLink="/impsTransfer">Fund Transfer</a></li>
+      <li><a routerLink="/accountStatement">Account Statement</a></li>
+    </ul>
+  </aside>
+</div>

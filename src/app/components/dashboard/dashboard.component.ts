@@ -1,3 +1,6 @@
+import { GlobalConstants } from 'src/app/model/globa-constants';
+import { UserloginComponent } from './../userlogin/userlogin.component';
+import { BankingService } from './../../service/banking.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  
+  
+  public global:GlobalConstants=new GlobalConstants();
 
-  constructor() { }
+  login=true;
 
+  dashBoardDetails:any;
+
+  constructor(private bankingService:BankingService) { 
+    this.bankingService.getAccountByAccountId(this.global.getGlobalVar()).subscribe(data=>this.dashBoardDetails=data);
+   
+  }
   ngOnInit(): void {
+
+    console.log(this.global.getGlobalVar());
   }
 
 }

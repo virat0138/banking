@@ -6,9 +6,30 @@
     "side content content content content";
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #bcb8b1;
+}
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
 .main-head {
   grid-area: header;
   background-color: #8a817c;
+  margin: 10px;
   height: 70px;
   text-align: center;
   font-size: 3em;
@@ -20,6 +41,7 @@
   grid-area: content;
   margin: 5px;
   height: 30rem;
+  overflow: scroll;
 }
 
 .content .date {

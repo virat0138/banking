@@ -65,6 +65,21 @@ form > div input {
   flex: 0.4;
 }
 
+form > div select {
+  text-align: left;
+  width: 40%;
+  height: 30px;
+  border: 1px solid black;
+  flex: 0.4;
+}
+
+option {
+  text-align: left;
+  width: 40%;
+  height: 30px;
+  border: 1px solid black;
+}
+
 form > div p {
   flex: 0.1;
   text-align: center;
@@ -98,4 +113,39 @@ form div .rightButtons button {
   font-size: 1.2rem;
   padding: 5px;
   float: right;
+}
+
+.valid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.valid .tbody {
+  /* flex-direction: column; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 70%;
+  padding: 10px;
+}
+
+.tbody label {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.tbody input {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+.tbody button {
+  margin: 10px;
+  font-size: 1rem;
+  padding: 8px;
+  margin-left: 3rem;
+  background-color: #e0afa0;
 }

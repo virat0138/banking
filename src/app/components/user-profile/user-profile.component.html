@@ -1,0 +1,77 @@
+<app-nav-bar></app-nav-bar>
+<div class="dashboardWrapper">
+  <header class="main-head">User Profile</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a routerLink="/accountStatement">Account Statement</a></li>
+      <li>
+        <div class="dropdown">
+          <span>Fund Transfer</span>
+          <div class="dropdown-content">
+            <a rel="rtgs" routerLink="/rtgsTransfer">RTGS Transfer</a>
+            <a rel="neft" routerLink="/neftTransfer">NEFT Transfer</a>
+            <a rel="imps" routerLink="/impsTransfer">IMPS Transfer</a>
+          </div>
+        </div>
+      </li>
+      <li><a routerLink="/userProfile">User Profile</a></li>
+      <li><a routerLink="">Change UserID Password</a></li>
+    </ul>
+  </nav>
+  <article [hidden]="false" class="content">
+    <header>My Profile</header>
+    <div>
+      <span><b>First Name</b> </span>
+      <span>{{ userDetails.customer.firstName }}</span>
+    </div>
+    <div>
+      <span><b>Last Name</b> </span>
+      <span>{{ userDetails.customer.lastName }}</span>
+    </div>
+    <div>
+      <span><b>Father Name</b> </span>
+      <span>{{ userDetails.customer.fatherName }}</span>
+    </div>
+    <div>
+      <span><b>Mobile Number</b> </span>
+      <span>{{ userDetails.customer.mobileNumber }}</span>
+    </div>
+    <div>
+      <span><b>Email Id</b> </span>
+      <span>{{ userDetails.customer.emailId }}</span>
+    </div>
+    <div>
+      <span><b>Aadhar Card Number</b> </span>
+      <span>{{ userDetails.customer.aadharNumber }}</span>
+    </div>
+    <div>
+      <span><b>Date of Birth</b> </span>
+      <span>{{ userDetails.customer.dob }}</span>
+    </div>
+    <div>
+      <span><b>Residential Address</b> </span>
+      <span>{{ userDetails.customer.residentialAddress }}</span>
+    </div>
+    <div>
+      <span><b>Permanent Address</b> </span>
+      <span>{{ userDetails.customer.permanentAddress }}</span>
+    </div>
+    <div>
+      <span><b>Occupation Type</b> </span>
+      <span>{{ userDetails.customer.occupation_type }}</span>
+    </div>
+    <div>
+      <span><b>Annual Income</b> </span>
+      <span>{{ userDetails.customer.grossAnnualIncome }}</span>
+    </div>
+  </article>
+  <aside class="side">
+    <ul>
+      <li><a routerLink="/dashboard">Home</a></li>
+      <li><a routerLink="/accountDetails">Account Details</a></li>
+      <li><a routerLink="/accountSummary">Account Summary</a></li>
+      <li><a routerLink="/impsTransfer">Fund Transfer</a></li>
+      <li><a routerLink="/accountStatement">Account Statement</a></li>
+    </ul>
+  </aside>
+</div>

@@ -8,6 +8,7 @@ ul {
 
 li {
   float: left;
+  background-color: #333;
 }
 
 p {
@@ -36,6 +37,14 @@ li p {
   text-decoration: inherit;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
+}
+
+li img {
+  margin-top: 6px;
+  margin-left: 6px;
+  background-color: #333;
+  height: 35px;
+  width: 35px;
 }
 
 li a:hover {

@@ -1,9 +1,9 @@
+import { GlobalConstants } from 'src/app/model/globa-constants';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterUserComponent } from './register-user/register-user.component';
 import { OpenAccountComponent } from './components/open-account/open-account.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AccountStatementComponent } from './components/account-statement/account-statement.component';
@@ -13,11 +13,19 @@ import { RtgsPaymentComponent } from './components/rtgs-payment/rtgs-payment.com
 import { NeftPaymentComponent } from './components/neft-payment/neft-payment.component';
 import { ImpsPaymentComponent } from './components/imps-payment/imps-payment.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { AccountDetailsComponent } from './components/account-details/account-details.component';
+import { AccountSummaryComponent } from './components/account-summary/account-summary.component';
+import { ValidateTransactionComponent } from './components/validate-transaction/validate-transaction.component';
+import { UserloginComponent } from './components/userlogin/userlogin.component';
+import { HomeComponent } from './components/home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterUserComponent,
     OpenAccountComponent,
     DashboardComponent,
     AccountStatementComponent,
@@ -26,13 +34,23 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     RtgsPaymentComponent,
     NeftPaymentComponent,
     ImpsPaymentComponent,
-    NavBarComponent
+    NavBarComponent,
+    UserProfileComponent,
+    AccountDetailsComponent,
+    AccountSummaryComponent,
+    ValidateTransactionComponent,
+    UserloginComponent,
+    HomeComponent
+
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [GlobalConstants],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

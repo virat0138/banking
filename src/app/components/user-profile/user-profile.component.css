@@ -1,0 +1,135 @@
+.dashboardWrapper {
+  display: grid;
+  grid-template-columns: 18% 32% 35% 15%;
+  grid-template-areas:
+    "header header header header"
+    "side nav nav nav"
+    "side content content content";
+}
+
+.main-head {
+  grid-area: header;
+  background-color: #8a817c;
+  height: 80px;
+  text-align: center;
+  font-size: 3em;
+  line-height: 80px;
+  border: 2px solid black;
+}
+
+.main-nav {
+  grid-area: nav;
+  margin: 5px;
+  opacity: 1;
+}
+
+.main-nav ul li a {
+  display: block;
+  text-decoration: none;
+  background-color: #a5a5a5;
+  padding: 10px 15px;
+  align-items: center;
+  text-transform: uppercase;
+  color: black;
+}
+
+.dropdown {
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background-color: #a5a5a5;
+}
+
+.dropdown span {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #a5a5a5;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  overflow: auto;
+  width: 18rem;
+  border: 1px solid black;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  z-index: 5;
+}
+
+.main-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-nav ul li {
+  flex: 1;
+  border: 1px solid black;
+}
+.main-nav ul li a:hover {
+  background-color: #8a817c;
+}
+
+.content {
+  grid-area: content;
+  border: 1px solid black;
+  overflow: scroll;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  margin-top: 0px;
+  height: 30rem;
+}
+
+.content header {
+  padding: 5px;
+  font-size: 20px;
+  background-color: #e0afa0;
+}
+
+.content div {
+  display: flex;
+
+  margin: 20px;
+  padding: 10px;
+}
+
+.content div span {
+  flex: 0.3;
+}
+
+.side {
+  grid-area: side;
+  margin-top: 50px;
+  background-color: #a5a5a5;
+  border: 1px solid black;
+}
+
+.side ul li a {
+  display: block;
+  text-decoration: none;
+  background-color: #a5a5a5;
+  padding: 10px 15px;
+  align-items: center;
+  text-transform: uppercase;
+  color: black;
+}
+
+.side ul li a:hover {
+  color: cornflowerblue;
+}
+
+.side ul {
+  background-color: #8a817c;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

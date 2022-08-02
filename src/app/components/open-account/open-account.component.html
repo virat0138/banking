@@ -5,10 +5,15 @@
   <div class="body">
     <h3>Personal Details</h3>
     <div class="formPanel">
-      <form>
+      <form (ngSubmit)="openAccountcus()">
         <div>
           <label for="title" class="required-field">Title</label>
-          <select id="title" name="title" required>
+          <select
+            id="title"
+            name="title"
+            required
+            [(ngModel)]="openAccount.title"
+          >
             <option value="Mr">Mr</option>
             <option value="Mrs">Mrs</option>
             <option value="Miss">Miss</option>
@@ -18,76 +23,179 @@
         <br />
         <div>
           <label for="firstName" class="required-field">First Name</label>
-          <input type="text" id="firstName" name="firstName" required />
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+            #name="ngModel"
+            [(ngModel)]="openAccount.firstName"
+          />
         </div>
         <br />
         <div>
           <label for="middleName">Middle Name</label>
-          <input type="text" id="middleName" name="middleName" />
+          <input
+            type="text"
+            id="middleName"
+            name="middleName"
+            [(ngModel)]="openAccount.middleName"
+          />
         </div>
         <br />
         <div>
           <label for="lastName" class="required-field">Last Name</label>
-          <input type="text" id="lastName" name="lastName" required />
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            [(ngModel)]="openAccount.lastName"
+          />
+        </div>
+        <br />
+        <br />
+        <div>
+          <label for="gender">Gender</label>
+          <input
+            type="text"
+            id="gender"
+            name="gender"
+            [(ngModel)]="openAccount.gender"
+          />
         </div>
         <br />
         <div>
           <label for="fatherName" class="required-field">Father's Name</label>
-          <input type="text" id="fatherName" name="fatherName" required />
+          <input
+            type="text"
+            id="fatherName"
+            name="fatherName"
+            required
+            [(ngModel)]="openAccount.fatherName"
+          />
         </div>
         <br />
         <div>
-          <label for="Mobile Number*" class="required-field"
-            >Mobile Number</label
-          >
-          <input type="text" id="mobileNumber" name="mobileNumber" required />
+          <label for="MobileNumber" class="required-field">Mobile Number</label>
+          <input
+            type="text"
+            id="mobileNumber"
+            name="mobileNumber"
+            required
+            [(ngModel)]="openAccount.mobileNumber"
+          />
         </div>
         <br />
         <div>
           <label for="emailId">Email ID</label>
-          <input type="text" id="emailId" name="emailId" />
+          <input
+            type="text"
+            id="emailId"
+            name="emailId"
+            [(ngModel)]="openAccount.emailId"
+          />
         </div>
         <br />
         <div>
           <label for="Aadhar" class="required-field">Aadhar Card Number</label>
-          <input type="text" id="aadharNumber" name="aadharNumber" required />
+          <input
+            type="text"
+            id="aadharNumber"
+            name="aadharNumber"
+            required
+            [(ngModel)]="openAccount.aadharNumber"
+          />
+        </div>
+        <br />
+        <br />
+        <div>
+          <label for="pancard" class="required-field">Pancard Number</label>
+          <input
+            type="text"
+            id="pancardNumber"
+            name="pancardNumber"
+            required
+            [(ngModel)]="openAccount.pancardNumber"
+          />
         </div>
         <br />
         <div>
           <label for="dob" class="required-field">Date of Birth</label>
-          <input type="date" id="dob" name="dob" required /><br />
+          <input
+            type="date"
+            id="dob"
+            name="dob"
+            required
+            [(ngModel)]="openAccount.dob"
+          /><br />
         </div>
         <br />
         <label>Residential Address</label>
         <br /><br />
         <div>
           <label for="address1" class="required-field">Address Line 1</label>
-          <input type="text" id="address1" name="address1" required />
+          <input
+            type="text"
+            id="address1"
+            name="address1"
+            required
+            [(ngModel)]="address1"
+          />
         </div>
         <br />
         <div>
           <label for="address2" class="required-field">Address Line 2</label>
-          <input type="text" id="address2" name="address2" required />
+          <input
+            type="text"
+            id="address2"
+            name="address2"
+            required
+            [(ngModel)]="address2"
+          />
         </div>
         <br />
         <div>
           <label for="landmark">Landmark</label>
-          <input type="text" id="landmark" name="landmark" />
+          <input
+            type="text"
+            id="landmark"
+            name="landmark"
+            [(ngModel)]="landmark"
+          />
         </div>
         <br />
         <div>
           <label for="state" class="required-field">State</label>
-          <input type="text" id="state" name="state" required />
+          <input
+            type="text"
+            id="state"
+            name="state"
+            required
+            [(ngModel)]="state"
+          />
         </div>
         <br />
         <div>
           <label for="city" class="required-field">City</label>
-          <input type="text" id="city" name="city" required />
+          <input
+            type="text"
+            id="city"
+            name="city"
+            required
+            [(ngModel)]="city"
+          />
         </div>
         <br />
         <div>
           <label for="pincode" class="required-field">Pincode</label>
-          <input type="text" id="pincode" name="pincode" required />
+          <input
+            type="text"
+            id="pincode"
+            name="pincode"
+            required
+            [(ngModel)]="pincode"
+          />
         </div>
         <br /><br />
         <label>Permanent Address</label><br /><br />
@@ -101,32 +209,67 @@
         ><br /><br />
         <div>
           <label for="paddress1" class="required-field">Address Line 1</label>
-          <input type="text" id="paddress1" name="paddress1" required />
+          <input
+            type="text"
+            id="paddress1"
+            name="paddress1"
+            required
+            [(ngModel)]="paddress1"
+          />
         </div>
         <br />
         <div>
           <label for="paddress2" class="required-field">Address Line 2</label>
-          <input type="text" id="paddress2" name="paddress2" required />
+          <input
+            type="text"
+            id="paddress2"
+            name="paddress2"
+            required
+            [(ngModel)]="paddress2"
+          />
         </div>
         <br />
         <div>
           <label for="plandmark">Landmark</label>
-          <input type="text" id="plandmark" name="plandmark" />
+          <input
+            type="text"
+            id="plandmark"
+            name="plandmark"
+            [(ngModel)]="plandmark"
+          />
         </div>
         <br />
         <div>
           <label for="pstate" class="required-field">State</label>
-          <input type="text" id="pstate" name="pstate" required />
+          <input
+            type="text"
+            id="pstate"
+            name="pstate"
+            required
+            [(ngModel)]="pstate"
+          />
         </div>
         <br />
         <div>
           <label for="pcity" class="required-field">City</label>
-          <input type="text" id="pcity" name="pcity" required />
+          <input
+            type="text"
+            id="pcity"
+            name="pcity"
+            required
+            [(ngModel)]="pcity"
+          />
         </div>
         <br />
         <div>
           <label for="pincode" class="required-field">Pincode</label>
-          <input type="text" id="ppincode" name="pincode" required />
+          <input
+            type="text"
+            id="ppincode"
+            name="pincode"
+            required
+            [(ngModel)]="ppincode"
+          />
         </div>
         <br /><br /><br />
         <label>Occupation Details</label><br /><br /><br />
@@ -139,6 +282,7 @@
             id="occupationType"
             name="occupationType"
             required
+            [(ngModel)]="openAccount.occupationType"
           />
         </div>
         <br />
@@ -151,6 +295,7 @@
             id="sourceOfIncome"
             name="sourceOfIncome"
             required
+            [(ngModel)]="openAccount.sourceOfIncome"
           />
         </div>
         <br />
@@ -158,16 +303,30 @@
           <label for="grossIncome" class="required-field"
             >Gross Annual Income</label
           >
-          <input type="text" id="grossIncome" name="grossIncome" required />
+          <input
+            type="text"
+            id="grossIncome"
+            name="grossIncome"
+            required
+            [(ngModel)]="openAccount.grossAnnualIncome"
+          />
         </div>
         <br /><br />
         <label>Debit/ATM Card</label><br /><br />
 
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          id="debit"
+          (change)="checkCheckBoxvalue1($event)"
+        />
         <label class="required-field">Do you want a debit card?</label><br />
-        <input type="checkbox" id="netbankingCheckbox" />
+        <input
+          type="checkbox"
+          id="netbankingCheckbox"
+          (change)="checkCheckBoxvalue2($event)"
+        />
         <label>Opt for Netbanking</label><br />
-        <input type="checkbox" id="agreeCheckbox" />
+        <input type="checkbox" id="agreeCheckbox" required />
         <label>I agree...</label><br /><br />
         <div>
           <button>Submit</button>

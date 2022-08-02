@@ -1,0 +1,16 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper" hidden="true">
+  <div class="header">Validate Payment</div>
+  <div class="body">
+    <form (ngSubmit)="onSubmit()">
+      <label for="tp">Enter Transaction Password</label><br /><br />
+      <input
+        type="password"
+        [(ngModel)]="validTransaction.password"
+        [ngModelOptions]="{ standalone: true }"
+      /><br /><br />
+      <button type="submit">Submit</button>
+      <button type="button">Back</button>
+    </form>
+  </div>
+</div>
